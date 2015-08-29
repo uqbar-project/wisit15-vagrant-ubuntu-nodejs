@@ -13,7 +13,7 @@ function instalar_dependencias_taller {
 	echo "Clonando repositorio base"
 	git clone https://github.com/$3 /vagrant/$3
 	ln -s /vagrant/$3 .
-	cd $3
+	cd ${3#*/}
 
 	echo "Instalando dependencias locales (via npm/bower)"
 	npm install
