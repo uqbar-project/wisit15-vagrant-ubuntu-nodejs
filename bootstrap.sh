@@ -11,11 +11,11 @@ function instalar_dependencias_taller {
 	npm install -g $2
 
 	echo "Clonando repositorio base"
-	git clone https://github.com/$3 /vagrant/$3
+	git clone https://github.com/$3 /vagrant/proyectos/$3
 	ln -s /vagrant/$3 .
 	cd ${3#*/}
 
-	echo "Instalando dependencias locales (via npm/bower)"
+	echo "Instalando dependencias locales (via npm)"
 	npm install
 }
 
