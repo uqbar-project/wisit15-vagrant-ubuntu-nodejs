@@ -5,15 +5,21 @@ function log {
 }
 
 function instalar_dependencias_taller {
-	log "Instalaremos ahora las dependencias del taller '$1'"
+	nombre=$1
+	repo=$2
+	dependencias_globales=$3
 
-	echo "Bajando dependencias globales (via npm)"
-	npm install -g $2
+	log "Instalaremos ahora las dependencias del taller '$nombre'"
+
+	if [[ -n "$dependencias_globales" ]]; then
+		echo "Bajando dependencias globales (via npm)"
+		npm install -g $dependencias_globales
+	fi
 
 	echo "Clonando repositorio base"
-	git clone https://github.com/$3 /vagrant/proyectos/$3
-	ln -s /vagrant/$3 .
-	cd ${3#*/}
+	git clone https://github.com/$repo /vagrant/proyectos/$repo
+	ln -s /vagrant/$repo .
+	cd ${repo#*/}
 
 	echo "Instalando dependencias locales (via npm)"
 	npm install
@@ -32,10 +38,14 @@ nvm alias default 0.12.7
 
 instalar_dependencias_taller \
 	"Desarrollo web mobile con Ionic Framework" \
-	"cordova ionic" \
-	"anvk/babel-npm-module-example"
+	"anvk/babel-npm-module-example" \
+	"cordova ionic"
 
 instalar_dependencias_taller \
 	"Creando sitios estáticos con HarpJS" \
-	"harp component" \
-	"anvk/babel-npm-module-example"
+	"anvk/babel-npm-module-example" \
+	"harp component"
+
+instalar_dependencias_taller \
+	"Functional Reactive Programming en Javascript" \
+	"holden-caulfield/redux-workshop"
