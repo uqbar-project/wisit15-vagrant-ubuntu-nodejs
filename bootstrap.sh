@@ -6,7 +6,7 @@ function log {
 
 function instalar_dependencias_taller {
 	nombre=$1
-	repo=$2
+	repo_slug=$2
 	dependencias_globales=$3
 
 	log "Instalaremos ahora las dependencias del taller '$nombre'"
@@ -17,9 +17,10 @@ function instalar_dependencias_taller {
 	fi
 
 	echo "Clonando repositorio base"
-	git clone https://github.com/$repo /vagrant/proyectos/$repo
-	ln -s /vagrant/$repo .
-	cd ${repo#*/}
+	repo=${repo_slug#*/}
+	git clone https://github.com/$repo_slug /vagrant/proyectos/$repo
+	ln -s /vagrant/proyectos/$repo .
+	cd $repo
 
 	echo "Instalando dependencias locales (via npm)"
 	npm install
