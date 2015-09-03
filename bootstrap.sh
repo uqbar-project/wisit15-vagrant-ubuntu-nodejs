@@ -43,7 +43,7 @@ instalar_dependencias_taller \
 
 instalar_dependencias_taller \
 	"Creando sitios estáticos con HarpJS" \
-	"anvk/babel-npm-module-example" \
+	"mumuki/mumuki-teacher-tools" \
 	"harp component"
 
 instalar_dependencias_taller \
