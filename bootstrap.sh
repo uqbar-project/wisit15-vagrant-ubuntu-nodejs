@@ -31,6 +31,7 @@ log "Descargando prerrequisitos del sistema"
 sudo apt-get update
 sudo apt-get install -y git vim wget curl
 sudo dpkg -i /vagrant/pkg/atom-amd64.deb
+sudo dpkg -i /vagrant/pkg/google-chrome-stable_current_amd64.deb
 
 log "Instalando NodeJS (via nvm)"
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh  | bash
