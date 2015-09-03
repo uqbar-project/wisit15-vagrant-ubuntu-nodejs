@@ -24,6 +24,7 @@ function instalar_dependencias_taller {
 
 	echo "Instalando dependencias locales (via npm)"
 	npm install
+	cd ..
 }
 
 log "Descargando prerrequisitos del sistema"
