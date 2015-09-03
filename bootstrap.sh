@@ -39,15 +39,5 @@ nvm install 0.12.7
 nvm alias default 0.12.7
 
 instalar_dependencias_taller \
-	"Desarrollo web mobile con Ionic Framework" \
-	"anvk/babel-npm-module-example" \
-	"cordova ionic"
-
-instalar_dependencias_taller \
-	"Creando sitios estáticos con HarpJS" \
-	"mumuki/mumuki-teacher-tools" \
-	"harp component"
-
-instalar_dependencias_taller \
 	"Functional Reactive Programming en Javascript" \
 	"holden-caulfield/redux-workshop"
