@@ -13,7 +13,7 @@ cd wisit15-vagrant-ubuntu-nodejs
 vagrant up
 ```
 
-Luego de bajar unas cuantas dependencias de internet, la VM quedará configurada y los proyectos de los distintos talleres estarán dentro de la carpeta `proyectos`
+Luego de bajar unas cuantas dependencias de internet, la VM quedará configurada y los proyectos de los distintos talleres estarán en la home del usuario vagrant, ya con todas sus dependencias instaladas.
 
-### Configuración por taller
+### Repositorios de los talleres
 [Functional Reactive Programming en Javascript](https://github.com/holden-caulfield/redux-workshop)
